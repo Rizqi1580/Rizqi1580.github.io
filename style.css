@@ -473,3 +473,75 @@ span{
     color: #ccc;
     margin-top: 0.5rem;
 }
+
+/* Styling untuk halaman Experience */
+.experience {
+    padding-bottom: 7rem;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 5%;
+}
+
+.experience-box {
+    display: flex;
+    gap: 2rem;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    background-color: #1f242d;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 90rem;
+    transition: 0.5s ease;
+}
+
+.experience-box:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.experience-icon {
+    flex-shrink: 0;
+}
+
+.experience-icon i {
+    font-size: 4rem;
+    color: #b74b4b;
+}
+
+.experience-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-details h3 {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.experience-details h4 {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+.experience-details p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+.experience-details ul {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.experience-details ul li {
+    margin-bottom: 0.5rem;
+}
