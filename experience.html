@@ -60,6 +60,13 @@
 
         </div>
     </section>
+    <script>
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('nav');
 
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+    };
+</script>
 </body>
 </html>

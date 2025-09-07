@@ -86,6 +86,7 @@ nav a.active{
         border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         display: none; /* Menyembunyikan menu secara default */
+        border-radius: 0 0 2rem 2rem;
     }
 
     nav.active{
@@ -95,13 +96,17 @@ nav a.active{
     nav a{
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+        border-left: 5px solid transparent;
     }
 
     nav a:hover,
     nav a.active{
         color: #b74b4b;
+        background-color: #000000;
         border-bottom: 0;
+        border-left: 5px solid #b74b4b;
     }
     /* Menampilkan ikon hamburger di layar kecil */
     #menu-icon{
