@@ -23,13 +23,12 @@ body{
 }
 
 header{
-    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: black;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -134,18 +133,21 @@ span{
     border-radius: 50%;
 }
 
-.home-img img{
+.home-img img {
     position: relative;
-    width: 32vw;
+    width: 25vw;
+    height: 25vw;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
     cursor: pointer;
     transition: 0.2s linear;
 }
 
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+.home-img img:hover {
+    transform: scale(1.05);
 }
 
 .social-icons a{
@@ -257,7 +259,169 @@ span{
     }
 
     .home-img img{
-        width: 70vw;
+        width: 50vw;
+        height: 50vw;
         margin-top: 4rem;
     }
+}
+
+@media(max-width:576px){
+    .home-img img{
+        width: 70vw;
+        height: 70vw;
+    }
+}
+
+/* Animasi Slide-in */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-section {
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* Styling untuk halaman Projects */
+
+.projects {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 4rem; 
+    padding: 2rem 5%;
+}
+
+.project-box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #161616;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.project-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-box img {
+    width: 40vw; 
+    max-width: 40rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Styling untuk bagian deskripsi proyek */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding: 0 2rem;
+}
+
+.project-details h4 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-details p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .project-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .project-box img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    .project-details {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Styling untuk halaman Skills */
+.skills {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.skill-box {
+    flex: 1 1 30rem;
+    background: #1f242d;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid transparent;
+    transition: 0.5s ease;
+}
+
+.skill-box:hover {
+    box-shadow: 0 0 25px #b74b4b;
+    transform: scale(1.02);
+}
+
+.skill-box i {
+    font-size: 7rem;
+    color: #b74b4b;
+}
+
+.skill-box h3 {
+    font-size: 2.6rem;
+    margin-top: 1.5rem;
+    color: white;
+}
+
+.skill-box p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: #ccc;
 }
