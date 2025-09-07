@@ -19,6 +19,7 @@
             <a href="education.html" >Education</a>
             <a href="experience.html" >Experience</a>
         </nav>
+        <div id="menu-icon" class="fa-solid fa-bars"></div>
     </header>
     <section class="home animated-section">
         <div class="home-img">
@@ -38,5 +39,14 @@
             <a href="mailto:rizqiarrasyid08@gmail.com" class="btn">Contact me</a>
         </div>
     </section>
+
+    <script>
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('nav');
+
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+    };
+</script>
 </body>
 </html>

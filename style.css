@@ -63,6 +63,52 @@ nav a.active{
     border-bottom: 3px solid #b74b4b;
 }
 
+/* Menambahkan styling untuk ikon hamburger */
+#menu-icon{
+    font-size: 3.5rem;
+    color: white;
+    cursor: pointer;
+    display: none; /* Menyembunyikan ikon di layar desktop */
+}
+
+/* Modifikasi media query untuk layar kecil */
+@media(max-width:995px){
+    header{
+        padding: 2rem 5%; /* Menambahkan padding yang lebih baik */
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: #1f242d;
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        display: none; /* Menyembunyikan menu secara default */
+    }
+
+    nav.active{
+        display: block; /* Menampilkan menu saat kelas 'active' ditambahkan */
+    }
+    
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        color: #b74b4b;
+        border-bottom: 0;
+    }
+    /* Menampilkan ikon hamburger di layar kecil */
+    #menu-icon{
+        display: block;
+    }
+}
+
 @media(max-width:995px){
     nav{
         position: absolute;
